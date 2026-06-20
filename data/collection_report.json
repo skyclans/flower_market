@@ -1,7 +1,1735 @@
 {
-  "generated_at": "2026-06-20T13:34:23",
+  "generated_at": "2026-06-20T15:38:51",
   "mode": "rebuild_from_raw",
   "runs": [
+    {
+      "market": "0000000001",
+      "date": "2025-06-21",
+      "status": "ok",
+      "records": 13
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-06-23",
+      "status": "ok",
+      "records": 1493
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-06-24",
+      "status": "ok",
+      "records": 599
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-06-25",
+      "status": "ok",
+      "records": 1205
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-06-26",
+      "status": "ok",
+      "records": 73
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-06-27",
+      "status": "ok",
+      "records": 1434
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-06-28",
+      "status": "ok",
+      "records": 22
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-06-30",
+      "status": "ok",
+      "records": 1584
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-01",
+      "status": "ok",
+      "records": 579
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-02",
+      "status": "ok",
+      "records": 1218
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-03",
+      "status": "ok",
+      "records": 102
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-04",
+      "status": "ok",
+      "records": 1387
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-05",
+      "status": "ok",
+      "records": 46
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-07",
+      "status": "ok",
+      "records": 1511
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-08",
+      "status": "ok",
+      "records": 536
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-09",
+      "status": "ok",
+      "records": 1155
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-10",
+      "status": "ok",
+      "records": 47
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-11",
+      "status": "ok",
+      "records": 1234
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-12",
+      "status": "ok",
+      "records": 13
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-14",
+      "status": "ok",
+      "records": 1423
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-15",
+      "status": "ok",
+      "records": 482
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-16",
+      "status": "ok",
+      "records": 1132
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-17",
+      "status": "ok",
+      "records": 99
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-18",
+      "status": "ok",
+      "records": 1138
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-19",
+      "status": "ok",
+      "records": 21
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-21",
+      "status": "ok",
+      "records": 1328
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-22",
+      "status": "ok",
+      "records": 475
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-23",
+      "status": "ok",
+      "records": 1077
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-24",
+      "status": "ok",
+      "records": 53
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-25",
+      "status": "ok",
+      "records": 1176
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-26",
+      "status": "ok",
+      "records": 11
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-28",
+      "status": "ok",
+      "records": 1010
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-29",
+      "status": "ok",
+      "records": 388
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-30",
+      "status": "ok",
+      "records": 706
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-07-31",
+      "status": "ok",
+      "records": 74
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-01",
+      "status": "ok",
+      "records": 1008
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-02",
+      "status": "ok",
+      "records": 47
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-04",
+      "status": "ok",
+      "records": 1196
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-05",
+      "status": "ok",
+      "records": 425
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-06",
+      "status": "ok",
+      "records": 912
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-07",
+      "status": "ok",
+      "records": 92
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-08",
+      "status": "ok",
+      "records": 1006
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-09",
+      "status": "ok",
+      "records": 44
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-11",
+      "status": "ok",
+      "records": 1238
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-12",
+      "status": "ok",
+      "records": 475
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-13",
+      "status": "ok",
+      "records": 1028
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-14",
+      "status": "ok",
+      "records": 54
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-15",
+      "status": "ok",
+      "records": 1075
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-16",
+      "status": "ok",
+      "records": 18
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-18",
+      "status": "ok",
+      "records": 1315
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-19",
+      "status": "ok",
+      "records": 498
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-20",
+      "status": "ok",
+      "records": 1028
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-21",
+      "status": "ok",
+      "records": 87
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-22",
+      "status": "ok",
+      "records": 1119
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-23",
+      "status": "ok",
+      "records": 16
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-25",
+      "status": "ok",
+      "records": 1379
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-26",
+      "status": "ok",
+      "records": 498
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-27",
+      "status": "ok",
+      "records": 1043
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-28",
+      "status": "ok",
+      "records": 83
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-29",
+      "status": "ok",
+      "records": 1224
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-08-30",
+      "status": "ok",
+      "records": 15
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-01",
+      "status": "ok",
+      "records": 1466
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-02",
+      "status": "ok",
+      "records": 503
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-03",
+      "status": "ok",
+      "records": 1088
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-04",
+      "status": "ok",
+      "records": 61
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-05",
+      "status": "ok",
+      "records": 1216
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-06",
+      "status": "ok",
+      "records": 11
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-08",
+      "status": "ok",
+      "records": 1415
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-09",
+      "status": "ok",
+      "records": 529
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-10",
+      "status": "ok",
+      "records": 1089
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-11",
+      "status": "ok",
+      "records": 65
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-12",
+      "status": "ok",
+      "records": 1216
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-13",
+      "status": "ok",
+      "records": 4
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-15",
+      "status": "ok",
+      "records": 1420
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-16",
+      "status": "ok",
+      "records": 582
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-17",
+      "status": "ok",
+      "records": 1077
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-18",
+      "status": "ok",
+      "records": 109
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-19",
+      "status": "ok",
+      "records": 1277
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-20",
+      "status": "ok",
+      "records": 22
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-22",
+      "status": "ok",
+      "records": 1454
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-23",
+      "status": "ok",
+      "records": 526
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-24",
+      "status": "ok",
+      "records": 1054
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-25",
+      "status": "ok",
+      "records": 65
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-26",
+      "status": "ok",
+      "records": 1298
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-27",
+      "status": "ok",
+      "records": 8
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-29",
+      "status": "ok",
+      "records": 1503
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-09-30",
+      "status": "ok",
+      "records": 445
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-01",
+      "status": "ok",
+      "records": 1105
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-02",
+      "status": "ok",
+      "records": 31
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-03",
+      "status": "ok",
+      "records": 976
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-04",
+      "status": "ok",
+      "records": 33
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-06",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-07",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-08",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-09",
+      "status": "ok",
+      "records": 139
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-10",
+      "status": "ok",
+      "records": 1631
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-11",
+      "status": "ok",
+      "records": 54
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-13",
+      "status": "ok",
+      "records": 1609
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-14",
+      "status": "ok",
+      "records": 588
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-15",
+      "status": "ok",
+      "records": 1189
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-16",
+      "status": "ok",
+      "records": 64
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-17",
+      "status": "ok",
+      "records": 1356
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-18",
+      "status": "ok",
+      "records": 10
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-20",
+      "status": "ok",
+      "records": 1560
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-21",
+      "status": "ok",
+      "records": 528
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-22",
+      "status": "ok",
+      "records": 1119
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-23",
+      "status": "ok",
+      "records": 38
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-24",
+      "status": "ok",
+      "records": 1269
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-25",
+      "status": "ok",
+      "records": 1
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-27",
+      "status": "ok",
+      "records": 1542
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-28",
+      "status": "ok",
+      "records": 488
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-29",
+      "status": "ok",
+      "records": 1151
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-30",
+      "status": "ok",
+      "records": 64
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-10-31",
+      "status": "ok",
+      "records": 1237
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-01",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-03",
+      "status": "ok",
+      "records": 1391
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-04",
+      "status": "ok",
+      "records": 433
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-05",
+      "status": "ok",
+      "records": 1106
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-06",
+      "status": "ok",
+      "records": 53
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-07",
+      "status": "ok",
+      "records": 1173
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-08",
+      "status": "ok",
+      "records": 6
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-10",
+      "status": "ok",
+      "records": 1499
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-11",
+      "status": "ok",
+      "records": 397
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-12",
+      "status": "ok",
+      "records": 1158
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-13",
+      "status": "ok",
+      "records": 100
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-14",
+      "status": "ok",
+      "records": 1220
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-15",
+      "status": "ok",
+      "records": 16
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-17",
+      "status": "ok",
+      "records": 1469
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-18",
+      "status": "ok",
+      "records": 336
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-19",
+      "status": "ok",
+      "records": 1105
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-20",
+      "status": "ok",
+      "records": 62
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-21",
+      "status": "ok",
+      "records": 1137
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-22",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-24",
+      "status": "ok",
+      "records": 1364
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-25",
+      "status": "ok",
+      "records": 337
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-26",
+      "status": "ok",
+      "records": 1124
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-27",
+      "status": "ok",
+      "records": 54
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-28",
+      "status": "ok",
+      "records": 1128
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-11-29",
+      "status": "ok",
+      "records": 11
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-01",
+      "status": "ok",
+      "records": 1407
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-02",
+      "status": "ok",
+      "records": 315
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-03",
+      "status": "ok",
+      "records": 1119
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-04",
+      "status": "ok",
+      "records": 52
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-05",
+      "status": "ok",
+      "records": 1081
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-06",
+      "status": "ok",
+      "records": 15
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-08",
+      "status": "ok",
+      "records": 1455
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-09",
+      "status": "ok",
+      "records": 307
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-10",
+      "status": "ok",
+      "records": 1129
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-11",
+      "status": "ok",
+      "records": 46
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-12",
+      "status": "ok",
+      "records": 1137
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-13",
+      "status": "ok",
+      "records": 6
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-15",
+      "status": "ok",
+      "records": 1496
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-16",
+      "status": "ok",
+      "records": 338
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-17",
+      "status": "ok",
+      "records": 1071
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-18",
+      "status": "ok",
+      "records": 41
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-19",
+      "status": "ok",
+      "records": 1139
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-20",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-22",
+      "status": "ok",
+      "records": 1597
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-23",
+      "status": "ok",
+      "records": 351
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-24",
+      "status": "ok",
+      "records": 1148
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-25",
+      "status": "ok",
+      "records": 84
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-26",
+      "status": "ok",
+      "records": 1091
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-27",
+      "status": "ok",
+      "records": 3
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-29",
+      "status": "ok",
+      "records": 1545
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-30",
+      "status": "ok",
+      "records": 291
+    },
+    {
+      "market": "0000000001",
+      "date": "2025-12-31",
+      "status": "ok",
+      "records": 1115
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-01",
+      "status": "ok",
+      "records": 100
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-02",
+      "status": "ok",
+      "records": 1136
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-03",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-05",
+      "status": "ok",
+      "records": 1574
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-06",
+      "status": "ok",
+      "records": 359
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-07",
+      "status": "ok",
+      "records": 1188
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-08",
+      "status": "ok",
+      "records": 89
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-09",
+      "status": "ok",
+      "records": 1126
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-10",
+      "status": "ok",
+      "records": 3
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-12",
+      "status": "ok",
+      "records": 1471
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-13",
+      "status": "ok",
+      "records": 361
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-14",
+      "status": "ok",
+      "records": 967
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-15",
+      "status": "ok",
+      "records": 93
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-16",
+      "status": "ok",
+      "records": 914
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-17",
+      "status": "ok",
+      "records": 13
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-19",
+      "status": "ok",
+      "records": 1311
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-20",
+      "status": "ok",
+      "records": 305
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-21",
+      "status": "ok",
+      "records": 913
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-22",
+      "status": "ok",
+      "records": 57
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-23",
+      "status": "ok",
+      "records": 872
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-24",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-26",
+      "status": "ok",
+      "records": 1294
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-27",
+      "status": "ok",
+      "records": 343
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-28",
+      "status": "ok",
+      "records": 1017
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-29",
+      "status": "ok",
+      "records": 100
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-30",
+      "status": "ok",
+      "records": 990
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-01-31",
+      "status": "ok",
+      "records": 6
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-02",
+      "status": "ok",
+      "records": 1439
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-03",
+      "status": "ok",
+      "records": 382
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-04",
+      "status": "ok",
+      "records": 1108
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-05",
+      "status": "ok",
+      "records": 141
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-06",
+      "status": "ok",
+      "records": 1106
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-07",
+      "status": "ok",
+      "records": 1
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-09",
+      "status": "ok",
+      "records": 1471
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-10",
+      "status": "ok",
+      "records": 348
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-11",
+      "status": "ok",
+      "records": 1096
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-12",
+      "status": "ok",
+      "records": 88
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-13",
+      "status": "ok",
+      "records": 1069
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-14",
+      "status": "ok",
+      "records": 13
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-16",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-17",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-18",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-19",
+      "status": "ok",
+      "records": 108
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-20",
+      "status": "ok",
+      "records": 1686
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-21",
+      "status": "ok",
+      "records": 96
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-23",
+      "status": "ok",
+      "records": 1739
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-24",
+      "status": "ok",
+      "records": 614
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-25",
+      "status": "ok",
+      "records": 1226
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-26",
+      "status": "ok",
+      "records": 117
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-27",
+      "status": "ok",
+      "records": 1337
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-02-28",
+      "status": "ok",
+      "records": 0
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-02",
+      "status": "ok",
+      "records": 1613
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-03",
+      "status": "ok",
+      "records": 573
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-04",
+      "status": "ok",
+      "records": 1165
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-05",
+      "status": "ok",
+      "records": 98
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-06",
+      "status": "ok",
+      "records": 1345
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-07",
+      "status": "ok",
+      "records": 63
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-09",
+      "status": "ok",
+      "records": 1506
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-10",
+      "status": "ok",
+      "records": 643
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-11",
+      "status": "ok",
+      "records": 1022
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-12",
+      "status": "ok",
+      "records": 58
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-13",
+      "status": "ok",
+      "records": 1345
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-14",
+      "status": "ok",
+      "records": 18
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-16",
+      "status": "ok",
+      "records": 1469
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-17",
+      "status": "ok",
+      "records": 690
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-18",
+      "status": "ok",
+      "records": 1120
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-19",
+      "status": "ok",
+      "records": 40
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-20",
+      "status": "ok",
+      "records": 1415
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-21",
+      "status": "ok",
+      "records": 61
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-23",
+      "status": "ok",
+      "records": 1433
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-24",
+      "status": "ok",
+      "records": 774
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-25",
+      "status": "ok",
+      "records": 1056
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-26",
+      "status": "ok",
+      "records": 69
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-27",
+      "status": "ok",
+      "records": 1477
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-28",
+      "status": "ok",
+      "records": 28
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-30",
+      "status": "ok",
+      "records": 1482
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-03-31",
+      "status": "ok",
+      "records": 855
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-01",
+      "status": "ok",
+      "records": 1123
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-02",
+      "status": "ok",
+      "records": 110
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-03",
+      "status": "ok",
+      "records": 1548
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-04",
+      "status": "ok",
+      "records": 32
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-06",
+      "status": "ok",
+      "records": 1443
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-07",
+      "status": "ok",
+      "records": 753
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-08",
+      "status": "ok",
+      "records": 1140
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-09",
+      "status": "ok",
+      "records": 68
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-10",
+      "status": "ok",
+      "records": 1545
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-11",
+      "status": "ok",
+      "records": 33
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-13",
+      "status": "ok",
+      "records": 1537
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-14",
+      "status": "ok",
+      "records": 714
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-15",
+      "status": "ok",
+      "records": 1154
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-16",
+      "status": "ok",
+      "records": 109
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-17",
+      "status": "ok",
+      "records": 1631
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-18",
+      "status": "ok",
+      "records": 65
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-20",
+      "status": "ok",
+      "records": 1650
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-21",
+      "status": "ok",
+      "records": 793
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-22",
+      "status": "ok",
+      "records": 1191
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-23",
+      "status": "ok",
+      "records": 120
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-24",
+      "status": "ok",
+      "records": 1521
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-25",
+      "status": "ok",
+      "records": 30
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-27",
+      "status": "ok",
+      "records": 1644
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-28",
+      "status": "ok",
+      "records": 616
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-29",
+      "status": "ok",
+      "records": 1280
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-04-30",
+      "status": "ok",
+      "records": 82
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-01",
+      "status": "ok",
+      "records": 1650
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-02",
+      "status": "ok",
+      "records": 37
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-04",
+      "status": "ok",
+      "records": 1727
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-05",
+      "status": "ok",
+      "records": 653
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-06",
+      "status": "ok",
+      "records": 1291
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-07",
+      "status": "ok",
+      "records": 130
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-08",
+      "status": "ok",
+      "records": 1517
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-09",
+      "status": "ok",
+      "records": 24
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-11",
+      "status": "ok",
+      "records": 1704
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-12",
+      "status": "ok",
+      "records": 804
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-13",
+      "status": "ok",
+      "records": 1302
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-14",
+      "status": "ok",
+      "records": 139
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-15",
+      "status": "ok",
+      "records": 1594
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-16",
+      "status": "ok",
+      "records": 25
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-18",
+      "status": "ok",
+      "records": 1616
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-19",
+      "status": "ok",
+      "records": 729
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-20",
+      "status": "ok",
+      "records": 1221
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-21",
+      "status": "ok",
+      "records": 99
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-22",
+      "status": "ok",
+      "records": 1491
+    },
     {
       "market": "0000000001",
       "date": "2026-05-23",
@@ -190,22 +1918,22 @@
     }
   ],
   "summary": {
-    "attempted": 31,
-    "succeeded": 31,
+    "attempted": 319,
+    "succeeded": 319,
     "success_rate_pct": 100.0,
-    "total_records": 20551,
+    "total_records": 228551,
     "exit_criteria_90pct_met": true
   },
   "dataset": {
-    "rows_after_dedup": 20551,
-    "items": 404,
+    "rows_after_dedup": 228551,
+    "items": 573,
     "by_category": {
-      "절화": 17245,
-      "난": 1562,
-      "관엽": 1744
+      "절화": 188845,
+      "난": 22084,
+      "관엽": 17622
     },
     "date_range": [
-      "2026-05-23",
+      "2025-06-21",
       "2026-06-20"
     ],
     "markets": [
