@@ -152,3 +152,22 @@ DATABASE_URL="$DATABASE_URL" uvicorn api.main:app --reload
 - `item_master.csv` 의 부류 분류는 **시드**입니다. 키워드 매칭(난 12 + 관엽 104) 외 나머지는 절화 기본값(`classify_method=default`)이며, 도메인 큐레이션이 필요합니다. `classify_method` 컬럼이 신뢰 신호입니다.
 - 양재 외 6개 시장은 현재 **최신 1일치 스냅샷**만 수집됨 (히스토리 백필은 동일 스크립트로 가능).
 - 엑셀에는 `부류` 컬럼이 없어 품목명 기반으로 추론합니다.
+
+---
+
+## 웹 앱 (web/) — 디자인을 코드로
+
+Figma MVP 디자인을 Vite + React 로 구현했고, FastAPI 를 통해 Neon 의 1년치 데이터를
+실시간으로 그린다. 차트 값은 하드코딩이 아니라 백엔드 집계(`/items/{item}/trend`)를
+통해 자동으로 채워진다.
+
+```bash
+# 백엔드
+export DATABASE_URL='postgresql://...neon.../neondb?sslmode=require'
+uvicorn api.main:app --reload          # :8000
+
+# 프론트
+cd web && npm install && npm run dev   # :5173
+```
+
+자세한 내용은 `web/README.md`.
