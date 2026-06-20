@@ -143,6 +143,43 @@ body {
 .ded-v { font-size: 22px; font-weight: 800; color: var(--ink); margin-top: 2px; }
 .ded-tag { margin-left: auto; font-size: 11px; font-weight: 700; color: var(--green); background: #fff; padding: 5px 9px; border-radius: 8px; }
 
+/* ===== 공제 배너 v2 (사업자 유형별) ===== */
+.ded2 { background: var(--green-bg); border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+.ded2-seg { display: flex; gap: 2px; background: #fff; border-radius: 10px; padding: 3px; }
+.ded2-seg-btn { flex: 1; border: none; background: transparent; padding: 8px 0; border-radius: 8px;
+  font-size: 13px; font-weight: 600; color: var(--sub); cursor: pointer; font-family: inherit; }
+.ded2-seg-btn--on { background: var(--green); color: #fff; font-weight: 800; }
+.ded2-grid { display: flex; gap: 8px; }
+.ded2-cell { flex: 1; background: #fff; border-radius: 12px; padding: 11px 10px; text-align: center; }
+.ded2-l { font-size: 11px; font-weight: 600; color: var(--sub); line-height: 1.4; min-height: 30px; display: flex; align-items: center; justify-content: center; }
+.ded2-v { font-size: 16px; font-weight: 800; letter-spacing: -.5px; margin-top: 4px; }
+.ded2-pos { color: var(--green); }
+.ded2-warn { color: var(--red); }
+.ded2-note { font-size: 12px; font-weight: 600; color: var(--green); line-height: 1.5; background: #fff; border-radius: 10px; padding: 10px 12px; }
+.ded2-foot { font-size: 11px; font-weight: 500; color: var(--sub); }
+
+/* ===== 세무 상담 버튼 / 모달 ===== */
+.consult-btn { width: 100%; border: none; background: var(--ink); color: #fff; font-size: 14px; font-weight: 800;
+  padding: 13px; border-radius: 12px; cursor: pointer; font-family: inherit; }
+.consult-btn:active { transform: translateY(1px); }
+
+.consult-intro { font-size: 13px; font-weight: 500; color: var(--sub); line-height: 1.6; background: var(--green-bg);
+  border-radius: 12px; padding: 12px 14px; }
+.consult-memo { resize: none; font-family: inherit; line-height: 1.5; }
+.consult-attach { background: var(--input); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.ca-title { font-size: 12px; font-weight: 700; color: var(--sub); margin-bottom: 2px; }
+
+/* 완료 화면 */
+.consult-done { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 18px 6px 4px; text-align: center; }
+.cd-check { width: 56px; height: 56px; border-radius: 50%; background: var(--green); color: #fff; font-size: 28px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; }
+.cd-title { font-size: 18px; font-weight: 800; margin-top: 4px; }
+.cd-sub { font-size: 13px; font-weight: 500; color: var(--sub); line-height: 1.6; }
+.cd-summary { width: 100%; background: var(--input); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.cd-row { display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
+.cd-row span { color: var(--sub); font-weight: 500; }
+.cd-row b { font-weight: 800; }
+
 /* full tx card (ledger) */
 .txfull { gap: 10px; }
 .lineitem { display: flex; align-items: center; gap: 10px; }

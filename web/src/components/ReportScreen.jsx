@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { api } from '../api.js'
 import { won, monthStartISO, todayISO } from '../util.js'
+import ConsultModal from './ConsultModal.jsx'
 
 function buildCSV(txs) {
   const head = ['날짜', '구분', '품목', '등급', '단위', '수량', '단가', '금액', '시세대비%']
@@ -15,6 +16,7 @@ function buildCSV(txs) {
 export default function ReportScreen() {
   const [rep, setRep] = useState(null)
   const [err, setErr] = useState(null)
+  const [consult, setConsult] = useState(false)
   const from = monthStartISO(), to = todayISO()
   useEffect(() => { api.report(from, to).then(setRep).catch((e) => setErr(String(e))) }, [])
 
@@ -57,9 +59,15 @@ export default function ReportScreen() {
 
             <button className="cta" onClick={exportCSV}>거래내역 CSV 내보내기</button>
             <div className="empty-note">CSV를 카카오톡·메일로 세무사에게 그대로 전달하면 됩니다. (세무 연동은 추후 단계)</div>
+
+            <button className="consult-btn" onClick={() => setConsult(true)}>세무 전문가 연결 · 빠른 절세 상담</button>
           </>
         )}
       </div>
+
+      {consult && (
+        <ConsultModal monthPurchase={rep?.purchase_total ?? 0} monthCount={rep?.purchase_count ?? 0} onClose={() => setConsult(false)} />
+      )}
     </div>
   )
 }

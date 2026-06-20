@@ -1,17 +1,16 @@
 import { useEffect, useState, useCallback } from 'react'
 import { api } from '../api.js'
-import { fmtDateKo, won, marginText, monthStartISO, todayISO } from '../util.js'
+import { fmtDateKo, won, marginText } from '../util.js'
 import TxInput from './TxInput.jsx'
+import DeductionBanner from './DeductionBanner.jsx'
 
 export default function LedgerScreen({ openInput, setOpenInput }) {
   const [filter, setFilter] = useState('')   // '' | purchase | sale
   const [txs, setTxs] = useState(null)
-  const [monthBuy, setMonthBuy] = useState(null)
   const [err, setErr] = useState(null)
 
   const load = useCallback(() => {
     api.listTx(filter || undefined).then((d) => setTxs(d.transactions)).catch((e) => setErr(String(e)))
-    api.report(monthStartISO(), todayISO()).then((r) => setMonthBuy(r.purchase_total)).catch(() => {})
   }, [filter])
   useEffect(() => { load() }, [load])
 
@@ -30,10 +29,7 @@ export default function LedgerScreen({ openInput, setOpenInput }) {
       </header>
 
       <div className="body">
-        <div className="deduction">
-          <div><div className="ded-l">이번 달 기록된 매입 (공제 대상)</div><div className="ded-v">{won(monthBuy)} 원</div></div>
-          <div className="ded-tag">기록할수록 ↑</div>
-        </div>
+        <DeductionBanner />
 
         {err && <div className="error">{err}</div>}
         {txs && txs.length === 0 && <div className="empty-note">기록이 없습니다. ‘+ 기록’으로 첫 거래를 남겨보세요.</div>}

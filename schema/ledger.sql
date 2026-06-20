@@ -34,3 +34,20 @@ CREATE TABLE IF NOT EXISTS app_transaction_line (
 
 CREATE INDEX IF NOT EXISTS ix_tx_user_date ON app_transaction (user_id, occurred_on DESC);
 CREATE INDEX IF NOT EXISTS ix_txline_tx   ON app_transaction_line (transaction_id);
+
+-- 세무 전문가 연결 · 빠른 절세 상담 요청
+CREATE TABLE IF NOT EXISTS app_consult_request (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  user_id TEXT NOT NULL DEFAULT 'demo',
+  name TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  biz_type TEXT,                          -- tax_free | general | simplified
+  channel TEXT NOT NULL DEFAULT 'phone',  -- phone | kakao
+  memo TEXT,
+  month_purchase BIGINT NOT NULL DEFAULT 0,  -- 제출 시점 이번 달 매입액
+  month_count INTEGER NOT NULL DEFAULT 0,    -- 제출 시점 이번 달 거래 건수
+  status TEXT NOT NULL DEFAULT 'new',      -- new | contacted | done
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS ix_consult_status ON app_consult_request (status, created_at DESC);

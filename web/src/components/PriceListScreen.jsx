@@ -4,7 +4,7 @@ import { won, catStyle } from '../util.js'
 import PriceCard from './PriceCard.jsx'
 import Chip from './Chip.jsx'
 
-const FAVS = ['장미', '거베라', '호접란', '국화']
+const FAVS = ['장미', '거베라', '호접란', '국화', '프리지아', '리시안사스', '백합', '작약', '수국', '카네이션', '튤립', '칼라', '해바라기', '스톡크', '라넌큘러스']
 
 export default function PriceListScreen({ onOpenItem }) {
   const [data, setData] = useState(null)

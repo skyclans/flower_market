@@ -130,14 +130,54 @@ WHERE t.user_id=%(user)s AND t.tx_type='purchase'
 GROUP BY l.item_name ORDER BY amount DESC LIMIT 5;
 """
 
+# 화원 평균 매출원가율(보수적 추정치). 매출 대비 기대 매입을 역산해 '미기록 추정'을 낸다.
+COGS_RATIO = 0.45
+
+
 @router.get("/reports/summary")
 def report(date_from: str | None = None, date_to: str | None = None):
     tot = fetch_all(REPORT, {"user": USER, "date_from": date_from, "date_to": date_to})[0]
     items = fetch_all(REPORT_ITEMS, {"user": USER, "date_from": date_from, "date_to": date_to})
     pt, st = int(tot["purchase_total"]), int(tot["sale_total"])
+    # 미기록 추정: 매출이 시사하는 기대 매입(매출×원가율)에서 실제 기록 매입을 뺀 양(음수면 0).
+    unrecorded_est = max(0, round(st * COGS_RATIO) - pt)
     return {
         "date_from": date_from, "date_to": date_to,
         "purchase_total": pt, "sale_total": st, "est_margin": st - pt,
         "purchase_count": int(tot["purchase_count"]), "sale_count": int(tot["sale_count"]),
         "top_items": [{"item_name": r["item_name"], "amount": int(r["amount"]), "qty": int(r["qty"])} for r in items],
+        "deduction": {
+            "recorded_purchase": pt,
+            "unrecorded_est": unrecorded_est,
+            "basis": f"매출 추정 매입(매출원가율 {int(COGS_RATIO * 100)}%) − 기록 매입",
+        },
     }
+
+
+# ===== 세무 전문가 연결 · 빠른 절세 상담 =====
+class ConsultIn(BaseModel):
+    name: str = Field(..., min_length=1, max_length=40)
+    phone: str = Field(..., min_length=1, max_length=20)
+    biz_type: str | None = Field(None, pattern="^(tax_free|general|simplified)$")
+    channel: str = Field("phone", pattern="^(phone|kakao)$")
+    memo: str | None = None
+    month_purchase: int = Field(0, ge=0)
+    month_count: int = Field(0, ge=0)
+
+INSERT_CONSULT = """
+INSERT INTO app_consult_request
+  (user_id, name, phone, biz_type, channel, memo, month_purchase, month_count)
+VALUES (%(user)s, %(name)s, %(phone)s, %(biz_type)s, %(channel)s, %(memo)s, %(month_purchase)s, %(month_count)s)
+RETURNING id, created_at;
+"""
+
+@router.post("/consult")
+def create_consult(body: ConsultIn):
+    with pool.connection() as conn, conn.cursor() as cur:
+        cur.execute(INSERT_CONSULT, {
+            "user": USER, "name": body.name, "phone": body.phone, "biz_type": body.biz_type,
+            "channel": body.channel, "memo": body.memo,
+            "month_purchase": body.month_purchase, "month_count": body.month_count,
+        })
+        row = cur.fetchone()
+    return {"id": row["id"], "status": "new", "created_at": str(row["created_at"])}
