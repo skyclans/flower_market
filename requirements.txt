@@ -1,4 +1,14 @@
+# Phase 0 — 수집/정규화
 requests>=2.31
 pandas>=2.0
-xlrd>=2.0          # 구 .xls(OLE) 파싱 — aT 경매동향 다운로드 포맷
-openpyxl>=3.1      # .xlsx 출력/검증용(선택)
+xlrd>=2.0.1          # .xls (OLE) 파싱
+openpyxl>=3.1        # .xlsx 호환
+
+# Phase 1 — 적재/배치
+psycopg[binary]>=3.1
+psycopg_pool>=3.2
+
+# Phase 1 — API
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6

@@ -90,7 +90,18 @@ flower_market/
 │   ├── codes.py             # 시장/부류 코드, 엔드포인트, 경매 캘린더
 │   ├── classify.py          # 품목→부류 결정론적 분류기
 │   ├── collect_auction.py   # 라이브 수집기 (세션+재시도)
-│   └── rebuild_from_raw.py  # 원본 엑셀 재처리 (오프라인)
+│   ├── rebuild_from_raw.py  # 원본 엑셀 재처리 (오프라인)
+│   ├── db.py                # auction_price 멱등 upsert (Phase 1)
+│   ├── run_daily.py         # 일배치 진입점, 소스 무관 (Phase 1)
+│   └── sources/             # 소스 추상화 (Phase 1)
+│       ├── base.py          #   AuctionRecord + AuctionSource 계약
+│       ├── excel_source.py  #   flower.at.or.kr (검증된 기본 소스)
+│       ├── openapi_source.py#   data.go.kr 15141808 (운영 후보)
+│       └── __init__.py      #   get_source(SOURCE) 팩토리
+├── api/                     # FastAPI 비교 슬라이스 (Phase 1)
+│   ├── main.py              # today / trend / compare / items / health
+│   ├── queries.py           # 읽기 SQL
+│   └── db.py                # 커넥션 풀
 ├── schema/
 │   └── auction_price.sql    # Postgres DDL + 시드
 ├── data/
@@ -100,11 +111,39 @@ flower_market/
 │   └── raw/*.xls            # 원본 31개
 ├── docs/
 │   ├── data_dictionary.md   # 필드 정의 + 소스 노트 + 한계
-│   └── phase0_findings.md   # PoC 결과 분석
+│   ├── phase0_findings.md   # Phase 0 PoC 결과 분석
+│   └── phase1_architecture.md # Phase 1 구조/운영
+├── .github/workflows/daily.yml  # 일배치 cron
+├── .env.example
 ├── requirements.txt
 ├── CLAUDE.md                # Claude Code 작업용 컨텍스트
 └── README.md
 ```
+
+---
+
+## Phase 1 — 라이브 데이터 + 비교 API (스캐폴드)
+
+정적 CSV를 항상 최신·쿼리 가능한 상태로 만들고 최소 비교 화면을 올리는 단계.
+상세는 `docs/phase1_architecture.md`.
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env                      # DATABASE_URL 채우기
+psql "$DATABASE_URL" < schema/auction_price.sql
+
+# 최신 시세 적재 (엑셀 소스 = 검증됨, 기본)
+SOURCE=excel MARKETS=0000000001 LAST_N=1 \
+  DATABASE_URL="$DATABASE_URL" python etl/run_daily.py
+
+# 비교 API 기동 → http://localhost:8000/docs
+DATABASE_URL="$DATABASE_URL" uvicorn api.main:app --reload
+```
+
+**소스 교체**: 엑셀 소스와 data.go.kr Open API 소스는 같은 인터페이스라
+`SOURCE=excel|openapi` 한 줄로 갈아끼웁니다. OpenAPI 전환 전 (1) 화훼 포함 여부,
+(2) `whsl_mrkt_code` 매핑(API 15141818)을 serviceKey로 확인해야 합니다. 미확인 시
+엑셀 소스가 영구 폴백입니다.
 
 ---
 
