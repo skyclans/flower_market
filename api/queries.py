@@ -67,8 +67,8 @@ SELECT auction_type,
 FROM auction_price
 WHERE market_code=%(market)s AND item_name=%(item)s
   AND auction_date=(SELECT d FROM latest)
-  AND (%(variety)s IS NULL OR variety_name=%(variety)s)
-  AND (%(grade)s   IS NULL OR grade=%(grade)s)
+  AND (%(variety)s::text IS NULL OR variety_name=%(variety)s::text)
+  AND (%(grade)s::text   IS NULL OR grade=%(grade)s::text)
 GROUP BY auction_type;
 """
 
