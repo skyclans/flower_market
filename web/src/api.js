@@ -6,20 +6,27 @@ async function getJSON(path) {
   if (!r.ok) throw new Error(`${r.status} ${await r.text()}`)
   return r.json()
 }
+async function postJSON(path, body) {
+  const r = await fetch(BASE + path, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+  })
+  if (!r.ok) throw new Error(`${r.status} ${await r.text()}`)
+  return r.json()
+}
+const qs = (o) => {
+  const p = Object.entries(o).filter(([, v]) => v != null && v !== '').map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
+  return p.length ? '?' + p.join('&') : ''
+}
 
 export const api = {
-  home: (items) =>
-    getJSON(`/home?market=${MARKET}&items=${encodeURIComponent(items.join(','))}`),
-  trend: (item, period) =>
-    getJSON(`/items/${encodeURIComponent(item)}/trend?market=${MARKET}&period=${period}`),
-  items: () => getJSON(`/items?market=${MARKET}`),
-  compare: async (item, price) => {
-    const r = await fetch(BASE + '/compare', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ item_name: item, my_price: price, market: MARKET }),
-    })
-    if (!r.ok) throw new Error(`${r.status} ${await r.text()}`)
-    return r.json()
-  },
+  // 시세
+  home: (items) => getJSON(`/home${qs({ market: MARKET, items: items.join(',') })}`),
+  trend: (item, period) => getJSON(`/items/${encodeURIComponent(item)}/trend${qs({ market: MARKET, period })}`),
+  items: () => getJSON(`/items${qs({ market: MARKET })}`),
+  compare: (item, price) => postJSON('/compare', { item_name: item, my_price: price, market: MARKET }),
+  // 장부
+  quote: (item, unitPrice) => getJSON(`/quote${qs({ item, unit_price: unitPrice, market: MARKET })}`),
+  listTx: (type) => getJSON(`/transactions${qs({ tx_type: type })}`),
+  createTx: (body) => postJSON('/transactions', body),
+  report: (from, to) => getJSON(`/reports/summary${qs({ date_from: from, date_to: to })}`),
 }

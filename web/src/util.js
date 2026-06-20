@@ -21,3 +21,16 @@ export function captionFor(period) {
     default: return '최근 12개월 · 본경매 월평균 (원)'
   }
 }
+
+export function fmtDateKo(iso) {
+  if (!iso) return ''
+  const d = new Date(iso + 'T00:00:00')
+  const wd = ['일', '월', '화', '수', '목', '금', '토'][d.getDay()]
+  return `${d.getMonth() + 1}월 ${d.getDate()}일 (${wd})`
+}
+export function marginText(m) {
+  if (m == null) return null
+  return { pct: (m > 0 ? '+' : '') + m + '%', good: m <= 0 }
+}
+export const todayISO = () => new Date().toISOString().slice(0, 10)
+export const monthStartISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-01` }

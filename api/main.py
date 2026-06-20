@@ -26,6 +26,7 @@ from pydantic import BaseModel, Field
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import queries as q                       # noqa: E402
 from db import pool, fetch_all            # noqa: E402
+from ledger import router as ledger_router  # noqa: E402
 
 PRIMARY_MARKET = "0000000001"   # 양재
 DEFAULT_ITEMS = ["장미", "거베라", "호접란", "국화"]
@@ -45,6 +46,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(ledger_router)  # 장부: /quote, /transactions, /reports/summary
 
 
 def _num(x):
