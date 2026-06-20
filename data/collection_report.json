@@ -1,0 +1,221 @@
+{
+  "generated_at": "2026-06-20T13:34:23",
+  "mode": "rebuild_from_raw",
+  "runs": [
+    {
+      "market": "0000000001",
+      "date": "2026-05-23",
+      "status": "ok",
+      "records": 85
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-25",
+      "status": "ok",
+      "records": 1462
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-26",
+      "status": "ok",
+      "records": 776
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-27",
+      "status": "ok",
+      "records": 1211
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-28",
+      "status": "ok",
+      "records": 53
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-29",
+      "status": "ok",
+      "records": 1470
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-05-30",
+      "status": "ok",
+      "records": 38
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-01",
+      "status": "ok",
+      "records": 1543
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-02",
+      "status": "ok",
+      "records": 705
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-03",
+      "status": "ok",
+      "records": 1165
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-04",
+      "status": "ok",
+      "records": 78
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-05",
+      "status": "ok",
+      "records": 1369
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-06",
+      "status": "ok",
+      "records": 19
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-08",
+      "status": "ok",
+      "records": 1491
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-09",
+      "status": "ok",
+      "records": 668
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-10",
+      "status": "ok",
+      "records": 1142
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-11",
+      "status": "ok",
+      "records": 60
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-12",
+      "status": "ok",
+      "records": 1143
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-13",
+      "status": "ok",
+      "records": 20
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-15",
+      "status": "ok",
+      "records": 1512
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-16",
+      "status": "ok",
+      "records": 634
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-17",
+      "status": "ok",
+      "records": 1203
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-18",
+      "status": "ok",
+      "records": 98
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-19",
+      "status": "ok",
+      "records": 1383
+    },
+    {
+      "market": "0000000001",
+      "date": "2026-06-20",
+      "status": "ok",
+      "records": 34
+    },
+    {
+      "market": "1508500020",
+      "date": "2026-06-19",
+      "status": "ok",
+      "records": 256
+    },
+    {
+      "market": "3848200087",
+      "date": "2026-06-18",
+      "status": "ok",
+      "records": 76
+    },
+    {
+      "market": "4108212335",
+      "date": "2026-06-19",
+      "status": "ok",
+      "records": 268
+    },
+    {
+      "market": "6068207466",
+      "date": "2026-06-19",
+      "status": "ok",
+      "records": 267
+    },
+    {
+      "market": "6158209828",
+      "date": "2026-06-19",
+      "status": "ok",
+      "records": 287
+    },
+    {
+      "market": "7368200686",
+      "date": "2026-06-17",
+      "status": "ok",
+      "records": 35
+    }
+  ],
+  "summary": {
+    "attempted": 31,
+    "succeeded": 31,
+    "success_rate_pct": 100.0,
+    "total_records": 20551,
+    "exit_criteria_90pct_met": true
+  },
+  "dataset": {
+    "rows_after_dedup": 20551,
+    "items": 404,
+    "by_category": {
+      "절화": 17245,
+      "난": 1562,
+      "관엽": 1744
+    },
+    "date_range": [
+      "2026-05-23",
+      "2026-06-20"
+    ],
+    "markets": [
+      "aT화훼(양재)",
+      "광주원예(풍암)",
+      "부경화훼(강동)",
+      "부산화훼(엄궁)",
+      "영남화훼(김해)",
+      "한국화훼(고양)",
+      "한국화훼(음성)"
+    ]
+  }
+}

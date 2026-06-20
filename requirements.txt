@@ -1,0 +1,4 @@
+requests>=2.31
+pandas>=2.0
+xlrd>=2.0          # 구 .xls(OLE) 파싱 — aT 경매동향 다운로드 포맷
+openpyxl>=3.1      # .xlsx 출력/검증용(선택)

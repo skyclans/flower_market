@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 참고: data/ 는 의도적으로 커밋한다 (Phase 0 PoC 산출물).
+#   대규모 운영 적재 단계에서는 raw/ 를 외부 스토리지(S3)로 분리 권장.
