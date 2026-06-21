@@ -1,0 +1,38 @@
+name: ci
+
+# 푸시/PR마다 자동 검증 — 깨진 커밋을 사람이 손으로 확인하지 않아도 잡아준다.
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", "api/**", "schema/**", "requirements.txt"]
+  pull_request:
+    paths: ["web/**", "api/**", "schema/**", "requirements.txt"]
+  workflow_dispatch: {}
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run build
+
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Compile-check API
+        run: python -m compileall -q api

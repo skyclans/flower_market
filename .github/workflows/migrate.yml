@@ -1,0 +1,34 @@
+name: migrate
+
+# Neon DB 마이그레이션 — 버튼 한 번(Actions → migrate → Run workflow)으로 적용.
+# schema/*.sql 은 모두 IF NOT EXISTS 라 반복 실행해도 안전(idempotent).
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "적용할 SQL 파일 (기본: 전체 schema/*.sql)"
+        required: false
+        default: ""
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install psql
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
+      - name: Apply migration
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set -euo pipefail
+          if [ -z "${DATABASE_URL:-}" ]; then echo "::error::secrets.DATABASE_URL 미설정"; exit 1; fi
+          files="${{ github.event.inputs.file }}"
+          if [ -z "$files" ]; then files=$(ls schema/*.sql | sort); fi
+          for f in $files; do
+            echo "── applying $f ──"
+            psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$f"
+          done
+          echo "✓ migration done"
