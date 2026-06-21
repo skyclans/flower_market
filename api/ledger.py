@@ -154,6 +154,85 @@ def report(date_from: str | None = None, date_to: str | None = None):
     }
 
 
+# ===== 매입/매출 시계열 (일·주·월·연 그래프용) =====
+# granularity는 화이트리스트로만 SQL에 주입(인젝션 차단). (unit, interval, 기본 버킷 수)
+_GRAN = {
+    "day":   ("day",   "1 day",   30),
+    "week":  ("week",  "1 week",  12),
+    "month": ("month", "1 month", 12),
+    "year":  ("year",  "1 year",  5),
+}
+
+def _default_range(gran: str) -> tuple[str, str]:
+    """granularity별 기본 조회 구간(최근 N버킷 ~ 오늘)."""
+    today = dt.date.today()
+    n = _GRAN[gran][2]
+    if gran == "day":
+        start = today - dt.timedelta(days=n - 1)
+    elif gran == "week":
+        monday = today - dt.timedelta(days=today.weekday())
+        start = monday - dt.timedelta(weeks=n - 1)
+    elif gran == "month":
+        y, m = today.year, today.month - (n - 1)
+        while m <= 0:
+            m += 12; y -= 1
+        start = dt.date(y, m, 1)
+    else:  # year
+        start = dt.date(today.year - (n - 1), 1, 1)
+    return start.isoformat(), today.isoformat()
+
+SERIES_SQL = """
+WITH buckets AS (
+  SELECT generate_series(
+    date_trunc('{unit}', %(from)s::date),
+    date_trunc('{unit}', %(to)s::date),
+    interval '{interval}') AS b
+), agg AS (
+  SELECT date_trunc('{unit}', occurred_on) AS b,
+    COALESCE(SUM(total_amount) FILTER (WHERE tx_type='purchase'),0) AS purchase,
+    COALESCE(SUM(total_amount) FILTER (WHERE tx_type='sale'),0)     AS sale,
+    COUNT(*) FILTER (WHERE tx_type='purchase')                      AS pc,
+    COUNT(*) FILTER (WHERE tx_type='sale')                          AS sc
+  FROM app_transaction
+  WHERE user_id=%(user)s
+    AND occurred_on >= %(from)s::date AND occurred_on <= %(to)s::date
+  GROUP BY 1
+)
+SELECT to_char(b.b, 'YYYY-MM-DD') AS bucket,
+       COALESCE(a.purchase,0)::bigint AS purchase,
+       COALESCE(a.sale,0)::bigint     AS sale,
+       COALESCE(a.pc,0)::int          AS purchase_count,
+       COALESCE(a.sc,0)::int          AS sale_count
+FROM buckets b LEFT JOIN agg a ON a.b = b.b
+ORDER BY b.b;
+"""
+
+@router.get("/reports/series")
+def report_series(granularity: str = Query("month", pattern="^(day|week|month|year)$"),
+                  date_from: str | None = None, date_to: str | None = None):
+    """매입/매출 시계열 — 일·주·월·연 버킷별 합계. 빈 버킷도 0으로 채워 반환(차트 연속성)."""
+    unit, interval, _ = _GRAN[granularity]
+    df, dt_ = (date_from, date_to)
+    if not df or not dt_:
+        d0, d1 = _default_range(granularity)
+        df, dt_ = (df or d0), (dt_ or d1)
+    sql = SERIES_SQL.format(unit=unit, interval=interval)
+    rows = fetch_all(sql, {"user": USER, "from": df, "to": dt_})
+    points = [{
+        "bucket": r["bucket"],
+        "purchase": int(r["purchase"]), "sale": int(r["sale"]),
+        "margin": int(r["sale"]) - int(r["purchase"]),
+        "purchase_count": int(r["purchase_count"]), "sale_count": int(r["sale_count"]),
+    } for r in rows]
+    tot_p = sum(p["purchase"] for p in points)
+    tot_s = sum(p["sale"] for p in points)
+    return {
+        "granularity": granularity, "date_from": df, "date_to": dt_,
+        "points": points,
+        "totals": {"purchase": tot_p, "sale": tot_s, "margin": tot_s - tot_p},
+    }
+
+
 # ===== 세무 전문가 연결 · 빠른 절세 상담 =====
 class ConsultIn(BaseModel):
     name: str = Field(..., min_length=1, max_length=40)

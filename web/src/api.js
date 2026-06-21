@@ -29,6 +29,7 @@ export const api = {
   listTx: (type) => getJSON(`/transactions${qs({ tx_type: type })}`),
   createTx: (body) => postJSON('/transactions', body),
   report: (from, to) => getJSON(`/reports/summary${qs({ date_from: from, date_to: to })}`),
+  series: (granularity, from, to) => getJSON(`/reports/series${qs({ granularity, date_from: from, date_to: to })}`),
   // 세무 상담
   consult: (payload) => postJSON('/consult', payload),
 }
