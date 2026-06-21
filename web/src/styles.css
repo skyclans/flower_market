@@ -253,6 +253,28 @@ body {
 .rep-buy { color: var(--blue); } .rep-sell { color: var(--green); }
 .rep-pos { color: var(--green); } .rep-neg { color: var(--red); }
 
+/* ===== 대시보드 요약 카드 (리포트) ===== */
+.dash-cards { display: flex; gap: 8px; }
+.dash-card { flex: 1; background: var(--card); border-radius: 14px; padding: 13px 10px; text-align: center;
+  box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 4px; }
+.dash-l { font-size: 12px; font-weight: 600; color: var(--sub); }
+.dash-v { font-size: 18px; font-weight: 800; letter-spacing: -.5px; }
+
+/* ===== 그룹형 막대 차트 ===== */
+.gchart { display: flex; flex-direction: column; gap: 8px; }
+.gchart-legend { display: flex; gap: 14px; }
+.gchart-legend span { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--sub); }
+.gleg-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.gleg-sale { background: var(--green); }
+.gleg-buy { background: var(--blue); }
+.gchart-svg { width: 100%; height: auto; display: block; }
+.gchart-xlbl { font-size: 9px; fill: var(--sub); font-weight: 500; }
+.gchart-empty { color: var(--sub); font-size: 13px; padding: 28px 0; text-align: center; }
+
+/* ===== 매입/매출 컬러 토글 (거래 입력) ===== */
+.seg-btn--buy { color: var(--blue) !important; background: var(--blue-bg) !important; }
+.seg-btn--sell { color: var(--green) !important; background: var(--green-bg) !important; }
+
 /* ===== 반응형: PC/태블릿 ===== */
 @media (min-width: 760px) {
   body { background: #DFE2DC; }

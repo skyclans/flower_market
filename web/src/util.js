@@ -14,6 +14,27 @@ export function bucketLabel(key, period) {
   return `${parseInt(m, 10)}/${parseInt(d, 10)}`
 }
 
+/* series 버킷 라벨: granularity 별 포맷 ('YYYY-MM-DD' bucket 기준)
+   day→"6/22", week→"6/22~", month→"7월", year→"2025" */
+export function seriesLabel(bucket, granularity) {
+  if (!bucket) return ''
+  const [y, m, d] = bucket.split('-')
+  switch (granularity) {
+    case 'year': return y
+    case 'month': return `${parseInt(m, 10)}월`
+    case 'week': return `${parseInt(m, 10)}/${parseInt(d, 10)}~`
+    default: return `${parseInt(m, 10)}/${parseInt(d, 10)}` // day
+  }
+}
+
+/* 선택 기간 캡션 (date_from ~ date_to) */
+export function seriesCaption(granularity, from, to) {
+  const g = { day: '일별', week: '주별', month: '월별', year: '연별' }[granularity] || granularity
+  if (!from || !to) return g
+  const f = from.slice(5).replace('-', '.'), t = to.slice(5).replace('-', '.')
+  return `${g} · ${from.slice(0, 4)}.${f} ~ ${t}`
+}
+
 export function captionFor(period) {
   switch (period) {
     case 'weekly': return '최근 12주 · 본경매 주평균 (원)'

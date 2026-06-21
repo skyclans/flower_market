@@ -58,9 +58,9 @@ export default function TxInput({ onClose, onSaved }) {
         </div>
 
         <div className="modal-body">
-          <div className="seg seg--lg">
-            <button className={'seg-btn' + (type === 'purchase' ? ' seg-btn--on' : '')} onClick={() => setType('purchase')}>매입</button>
-            <button className={'seg-btn' + (type === 'sale' ? ' seg-btn--on' : '')} onClick={() => setType('sale')}>매출</button>
+          <div className="seg seg--lg seg--type">
+            <button className={'seg-btn' + (type === 'purchase' ? ' seg-btn--on seg-btn--buy' : '')} onClick={() => setType('purchase')}>매입</button>
+            <button className={'seg-btn' + (type === 'sale' ? ' seg-btn--on seg-btn--sell' : '')} onClick={() => setType('sale')}>매출</button>
           </div>
 
           <div className="field-row">
