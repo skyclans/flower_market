@@ -1,15 +1,37 @@
 :root {
-  --bg: #F4F5F0; --card: #FFFFFF; --ink: #1A201A; --sub: #767E76; --line: #ECEEE8;
-  --green: #2E7D4F; --green-bg: #E6F1EA; --bar-lt: #B6DAC4;
-  --red: #C5402E; --red-bg: #FBECE8; --blue: #2563A8; --blue-bg: #E8F0FA;
-  --pink: #D2557C; --pink-bg: #FAE9F0; --purple: #7A57C2; --purple-bg: #EEE8FB;
-  --leaf: #3E8E5A; --leaf-bg: #E6F1EA; --input: #F5F7F3; --seg: #ECEEE8;
-  --shadow: 0 2px 10px rgba(26,33,26,.06), 0 1px 2px rgba(26,33,26,.05);
+  /* ===== 보타니컬 프리미엄 팔레트 ===== */
+  --bg: #FAF7F2;            /* 크림 */
+  --card: #FFFFFF;
+  --ink: #25342B;          /* 딥그린-잉크 (본문) */
+  --sub: #8A917F;          /* 뮤트 세이지그레이 */
+  --line: #ECE6DC;         /* 웜 디바이더 */
+  --green: #1F3D2E;        /* 딥그린 = 프라이머리(매출/CTA) */
+  --green-bg: #E7EFE8;     /* 페일 그린 틴트 */
+  --bar-lt: #BFD3C4;
+  /* 매입/보조 = 테라코타 */
+  --blue: #C96E4A;         /* 의미상 '매입/대비' → 테라코타 리매핑 */
+  --blue-bg: #F6E7DF;
+  --red: #B5502F;          /* 경고/초과 = 딥 테라코타레드 */
+  --red-bg: #F7E5DE;
+  --sage: #7C9885; --sage-bg: #E9EFE9;
+  /* 카테고리(뮤트) */
+  --pink: #B07089; --pink-bg: #F3E8EE;     /* 절화 = 더스티로즈 */
+  --purple: #6E5C93; --purple-bg: #ECE7F3; /* 난 = 뮤트플럼 */
+  --leaf: #5E8268; --leaf-bg: #E7EFE8;     /* 관엽 = 세이지그린 */
+  --input: #F4F1EA; --seg: #ECE6DC;
+  --shadow: 0 4px 16px rgba(31,61,46,.07), 0 1px 3px rgba(31,61,46,.05);
+  --font-serif: "Noto Serif KR", serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #E7E9E4; color: var(--ink); -webkit-font-smoothing: antialiased;
+  background: #EFE9DF; color: var(--ink); -webkit-font-smoothing: antialiased;
+}
+
+/* ===== 세리프 제목 (제목·큰 숫자에만, 남발 금지) ===== */
+.brand, .pcard-name, .pval, .d-name, .card-title, .rep-v, .ded-v, .ded2-v,
+.cd-title, .modal-title, .dash-v {
+  font-family: var(--font-serif); letter-spacing: -.2px;
 }
 .frame { max-width: 420px; margin: 0 auto; min-height: 100vh; background: var(--bg);
   box-shadow: 0 0 40px rgba(0,0,0,.06); }
@@ -21,8 +43,8 @@ body {
 .muted-link { font-size: 13px; color: var(--sub); font-weight: 500; }
 
 /* header */
-.hd { background: #fff; padding: 16px; display: flex; flex-direction: column; gap: 13px;
-  box-shadow: 0 2px 12px rgba(26,33,26,.05); position: sticky; top: 0; z-index: 5; }
+.hd { background: var(--card); padding: 16px; display: flex; flex-direction: column; gap: 13px;
+  border-bottom: 1px solid var(--line); box-shadow: 0 1px 8px rgba(31,61,46,.04); position: sticky; top: 0; z-index: 5; }
 .hd .row { justify-content: space-between; }
 .brand { font-size: 20px; font-weight: 800; color: var(--green); }
 .hd-date { font-size: 13px; color: var(--sub); font-weight: 500; }
@@ -42,8 +64,8 @@ body {
 .chip { font-size: 12px; font-weight: 600; padding: 4px 9px; border-radius: 8px; white-space: nowrap; }
 
 /* price card */
-.card { background: var(--card); border-radius: 18px; padding: 16px; box-shadow: var(--shadow);
-  display: flex; flex-direction: column; gap: 14px; }
+.card { background: var(--card); border-radius: 20px; padding: 16px; box-shadow: var(--shadow);
+  border: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
 .pcard { cursor: pointer; }
 .pcard .row:first-child { justify-content: space-between; }
 .pcard-name { font-size: 18px; font-weight: 800; }
@@ -82,8 +104,8 @@ body {
 .cmp-note { font-size: 11px; font-weight: 600; }
 
 /* bottom tabs */
-.tabs { display: flex; background: #fff; padding: 9px 8px 14px; box-shadow: 0 -2px 12px rgba(26,33,26,.06);
-  position: sticky; bottom: 0; }
+.tabs { display: flex; background: var(--card); padding: 9px 8px 14px; border-top: 1px solid var(--line);
+  box-shadow: 0 -2px 12px rgba(31,61,46,.05); position: sticky; bottom: 0; }
 .tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px; }
 .tab span { font-size: 11px; font-weight: 500; color: var(--sub); }
 .tab--on span { color: var(--green); font-weight: 700; }
@@ -101,7 +123,7 @@ body {
 .seg { display: flex; gap: 2px; background: var(--seg); border-radius: 10px; padding: 3px; }
 .seg-btn { flex: 1; border: none; background: transparent; padding: 7px 0; border-radius: 8px;
   font-size: 13px; font-weight: 500; color: var(--sub); cursor: pointer; font-family: inherit; }
-.seg-btn--on { background: #fff; color: var(--ink); font-weight: 700; box-shadow: 0 1px 2px rgba(0,0,0,.1); }
+.seg-btn--on { background: var(--card); color: var(--ink); font-weight: 700; box-shadow: 0 1px 3px rgba(31,61,46,.12); }
 
 /* bar chart */
 .bars { display: flex; align-items: flex-end; justify-content: center; gap: 3px; height: 150px; }
@@ -122,7 +144,7 @@ body {
 
 /* ===== 장부 v1 추가 스타일 ===== */
 .cta { width: 100%; border: none; background: var(--green); color: #fff; font-size: 16px; font-weight: 800;
-  padding: 15px; border-radius: 14px; cursor: pointer; font-family: inherit; box-shadow: 0 4px 14px rgba(46,125,79,.25); }
+  padding: 15px; border-radius: 14px; cursor: pointer; font-family: inherit; box-shadow: 0 4px 14px rgba(31,61,46,.22); }
 .cta:active { transform: translateY(1px); }
 .empty-note { font-size: 13px; color: var(--sub); line-height: 1.6; padding: 6px 2px; }
 .hd-add { border: none; background: var(--green-bg); color: var(--green); font-weight: 800; font-size: 13px;
@@ -195,7 +217,7 @@ body {
 .txfull-foot b { font-size: 16px; }
 
 /* modal (tx input) */
-.modal-bg { position: fixed; inset: 0; background: rgba(20,25,20,.45); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
+.modal-bg { position: fixed; inset: 0; background: rgba(31,61,46,.42); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
 .modal { background: var(--bg); width: 100%; max-width: 420px; max-height: 92vh; border-radius: 20px 20px 0 0;
   display: flex; flex-direction: column; }
 .modal-hd { display: flex; align-items: center; justify-content: space-between; padding: 16px; background: #fff; border-radius: 20px 20px 0 0; }
@@ -277,7 +299,7 @@ body {
 
 /* ===== 반응형: PC/태블릿 ===== */
 @media (min-width: 760px) {
-  body { background: #DFE2DC; }
+  body { background: #E8E1D5; }
   .frame { max-width: 720px; margin: 24px auto; min-height: calc(100vh - 48px); border-radius: 20px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.10); }
   .hd { border-radius: 0; position: static; }
   .tabs { position: static; }

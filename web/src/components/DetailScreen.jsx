@@ -84,7 +84,7 @@ export default function DetailScreen({ item, onBack }) {
           <div className="caption">{captionFor(period).split('·')[0].trim()} · 합계 {won(sumVol(trend))} {summary?.unit || ''}</div>
           {trend ? (
             <BarChart points={trend.points.map((p) => ({ key: p.key, price: p.volume }))} period={period}
-              accent="var(--green)" light="#D2E8DB" />
+              accent="var(--green)" light="var(--bar-lt)" />
           ) : <div className="chart-empty">불러오는 중…</div>}
         </div>
 
