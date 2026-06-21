@@ -1,0 +1,17 @@
+# Render Blueprint — FastAPI 백엔드 배포.
+# Render 대시보드 → New + → Blueprint → 이 repo 선택하면 자동 인식.
+services:
+  - type: web
+    name: kkotjangbu-api
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true            # main 푸시 시 자동 재배포
+    envVars:
+      - key: DATABASE_URL       # Neon 연결 문자열 — 대시보드/시크릿에서 입력
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.12.6"
